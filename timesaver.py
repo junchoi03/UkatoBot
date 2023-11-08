@@ -197,7 +197,3 @@ def format_time_string(str_time: str) -> str:
     str_time = str_time.strip(':.')
     return str_time
 
-
-if __name__ == "__main__":
-    time1 = '0:10:123'
-    store_time(time1, 'test', 'test')
