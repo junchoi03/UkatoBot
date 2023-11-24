@@ -162,4 +162,5 @@ def run_discord_bot():  # Use the main file to run this function
     except:
         print("An issue has occurred running the bot, Potential Issues are: "
               "\n No Bot Token Set -> Create a bot token from the discord developer portal and copy it into the token.json file"
+              "\n Incorrect Token Format -> Check for spaces or new lines"
               "\n Poor Wifi Connection -> Check Wifi Strength, Try turning it off and on again")
