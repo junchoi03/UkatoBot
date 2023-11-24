@@ -1,7 +1,6 @@
 """
 Ukato's Time Saver Discord Bot
 Created by Ukato
-Last Updated 14/06/2023
 See README
 """
 
@@ -16,10 +15,6 @@ def run_discord_bot():  # Use the main file to run this function
     token_data = json.load(token_file)
     TOKEN = token_data["TOKEN"]
     token_file.close()
-
-    if TOKEN == "Insert Token Here":
-
-        return
 
     intents = discord.Intents.default()
     intents.message_content = True

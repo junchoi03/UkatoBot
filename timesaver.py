@@ -1,7 +1,6 @@
 """
 Assetto Corsa Time Saver File
 Created by Ukato
-Last Updated 14/06/2023
 """
 
 import json
