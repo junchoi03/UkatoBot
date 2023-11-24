@@ -6,3 +6,4 @@ pip install pytesseract
 
 Tesseract OCR engine Download Link
 https://github.com/tesseract-ocr/tessdoc/blob/main/Downloads.md
+
