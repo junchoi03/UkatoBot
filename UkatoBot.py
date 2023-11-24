@@ -21,13 +21,11 @@ def create_token():
     if not os.path.isfile('./token.json'):
         print("You do not have a set Discord token")
         new_token = input("Copy and paste your token here: ")
-        new_token.translate(None, ' \n\t\r')
         jsonContent = {
             "TOKEN": new_token
         }
         with open('token.json', 'w') as f:
             json.dump(jsonContent, f)
-
 
 def run_discord_bot():  # Use the main file to run this function
     token_file = open("token.json")
