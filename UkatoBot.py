@@ -12,7 +12,15 @@ from timesaver import *
 
 
 def run_discord_bot():  # Use the main file to run this function
-    TOKEN = 'MTA0MDg2NjE4MTgyNzAwMjM3OA.GvAXJK.b4UQJcAbU0aNXYd17SE_oHs8e37X2ZDvC9GTi8'
+    token_file = open("token.json")
+    token_data = json.load(token_file)
+    TOKEN = token_data["TOKEN"]
+    token_file.close()
+
+    if TOKEN == "Insert Token Here":
+
+        return
+
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents=intents)
@@ -154,4 +162,9 @@ def run_discord_bot():  # Use the main file to run this function
                 await message.channel.send(embed=embed)
 
     # Run Bot Client
-    client.run(TOKEN)
+    try:
+        client.run(TOKEN)
+    except:
+        print("An issue has occurred running the bot, Potential Issues are: "
+              "\n No Bot Token Set -> Create a bot token from the discord developer portal and copy it into the token.json file"
+              "\n Poor Wifi Connection -> Check Wifi Strength, Try turning it off and on again")
