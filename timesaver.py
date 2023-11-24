@@ -172,7 +172,7 @@ def convert_str_to_time(str_time):
     """
     Converts a string containing a time into a date time datatype
 
-    :param str_time: A string of a time in the format MIN:SEC:MILLISEC
+    :param str_time: A string of a time in the format MIN:SEC:MILLISECOND
     :return: Datetime value of the time record
     """
     # Converts the input string to date time format
@@ -188,7 +188,7 @@ def format_time_string(str_time: str) -> str:
         This is for consistency as sometimes, the engine recognises ':' as another character
 
         :param str_time: A string of a time
-        :return: Formatted string in format MIN:SEC:MILLISEC
+        :return: Formatted string in format MIN:SEC:MILLISECOND
         """
     # Converts the input string to date time format
     # Converts date time into a string

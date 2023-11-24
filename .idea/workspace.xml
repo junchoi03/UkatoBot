@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0b55d363-b05b-4f3b-b715-9bf804e6f5e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UkatoBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/UkatoBot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timesaver.py" beforeDir="false" afterPath="$PROJECT_DIR$/timesaver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

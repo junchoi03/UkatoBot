@@ -9,6 +9,25 @@ import requests
 
 from timesaver import *
 
+def create_token():
+    """
+    Checks and creates a json file to store the discord token
+
+    Go to the Discord Developer Platform and create your own discord bot
+    Create a token, copy and paste it into the terminal when the file runs.
+
+    :return: None
+    """
+    if not os.path.isfile('./token.json'):
+        print("You do not have a set Discord token")
+        new_token = input("Copy and paste your token here: ")
+        new_token.translate(None, ' \n\t\r')
+        jsonContent = {
+            "TOKEN": new_token
+        }
+        with open('token.json', 'w') as f:
+            json.dump(jsonContent, f)
+
 
 def run_discord_bot():  # Use the main file to run this function
     token_file = open("token.json")
@@ -160,7 +179,6 @@ def run_discord_bot():  # Use the main file to run this function
     try:
         client.run(TOKEN)
     except:
-        print("An issue has occurred running the bot, Potential Issues are: "
-              "\n No Bot Token Set -> Create a bot token from the discord developer portal and copy it into the token.json file"
-              "\n Incorrect Token Format -> Check for spaces or new lines"
-              "\n Poor Wifi Connection -> Check Wifi Strength, Try turning it off and on again")
+        print("An issue has occurred running the bot, Possible Issues are: "
+              "\n Incorrect Token Format    -> Open token.json file and check if your token is correct"
+              "\n Poor Wifi Connection      -> Check Wifi Strength, Try turning it off and on again")
