@@ -44,9 +44,9 @@ def run_discord_bot():  # Use the main file to run this function
     @client.event
     async def on_ready():
         await tree.sync(guild=discord.Object(id=961085980050350100))
-        print(f'Bot is now running')
+        print('Bot is now running')
 
-    @tree.command(name="help_actimesaver", description="How to use the assetto corsa time saver")
+    @tree.command(name="help", description="How to use the assetto corsa time saver")
     async def help_ac_command(interaction):
         # Sends the text file containing how to use the bot, as an embedded message
         with open(r'TrackTimeSaver.txt', 'r') as f:
@@ -97,7 +97,7 @@ def run_discord_bot():  # Use the main file to run this function
             await interaction.response.send_message(f'Track "{track_name}" was created successfully')
 
     @tree.command(name="addtime", description="Manually add a time for a given race track/map")
-    async def add_time_command(interaction, time: str):
+    async def add_time_command(interaction, time: str, track_name: str):
         # Manually add a time to the leaderboard, incase the time cannot be recognised
         # Message pre-processing
         username = str(interaction.author).split('#')[0]
@@ -112,9 +112,6 @@ def run_discord_bot():  # Use the main file to run this function
 
         # Adds the time to the leaderboard
         else:
-            time = message_list[-1]
-            message_list.remove(time)
-            track_name = " ".join(message_list)
             track_name = track_name.strip(" ")
 
             try:  # Validate the time added
