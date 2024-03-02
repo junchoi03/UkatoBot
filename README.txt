@@ -1,4 +1,4 @@
-Thank you for using my Discord Bot Code
+Thank you for using my Discord Bot 
 
 Libraries Required, Paste each command into your terminal:
 pip install Pillow
