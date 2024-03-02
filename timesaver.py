@@ -32,7 +32,7 @@ def get_time(img: Image) -> str | None:
     custom_config += f" --user-words {','.join(my_dict.keys())}"
     custom_config += f" --user-patterns {','.join(my_dict.keys())}"
 
-    # Locate engine
+    # Locate engine, absolute path for now
     pytesseract.tesseract_cmd = r'C:\Users\junis\AppData\Local\Tesseract-OCR\tesseract.exe'
 
     # dimensions
